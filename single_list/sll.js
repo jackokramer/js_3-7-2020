@@ -27,7 +27,7 @@ class SLL{
         let runner = this.head;
         let count = 0;
         while(runner){
-            console.log('You are on node: ${count}, its value is : ${runner.value}')
+            console.log(`You are on node: ${count}, its value is : ${runner.value}`)
             runner = runner.next;
             count+= 1;
         }
@@ -37,7 +37,7 @@ class SLL{
         let temp = this.head;
         this.head = new Node(value);
         this.head.next = temp;
-        console.log('A new node had been added to the list')
+        console.log(`A new node had been added to the list`)
         return this
     }
     addBack(value){
@@ -45,7 +45,7 @@ class SLL{
         // add node
         let runner = this.head;
         while(runner.next){
-            console.log('this is the current value:${runner.value}, this is the next node: ${runner.next}')
+            console.log(`this is the current value:${runner.value}, this is the next node: ${runner.next}`)
             runner = runner.next
         }
         runner.next = new Node(value);
