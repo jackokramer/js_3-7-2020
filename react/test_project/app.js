@@ -1,17 +1,11 @@
-const myButton = React.createElement('button', null, 'Click Me');
-console.log(JSON.stringify(myButton));
+const helloReact = ("h1", null, 'Hello React!')
 
-const heading = React.createElement('h1', null, "React Prac");
-console.log(JSON.stringify(heading));
+const thingsToDo1 = React.createElement('ul', null,
+ React.createElement("li", {style:{color:'green'}}, "Learn React!"),
+ React.createElement('li', {style:{color:'blue'}}, "learn Django"),
+ React.createElement('li', null, 'Run a 5k'), React.createElement('li', {style: {color: 'red'}}, 'rest and relax')
+);
 
-React.createElement('h1', null, "hellow");
+ReactDOM.render(helloReact, document.getElementById('root'));
 
-React.createElement('p', null, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus accusamus sit repudiandae aliquid ab earum a, minus voluptate accusantium nisi ratione et provident quis laborum eaque voluptas non molestias soluta.")
-React.createElement('button', null, "click me")
-
-ReactDOM.render(myButton, document.getElementById('app'))
-
-ReactDOM.render(heading, document.getElementById('heading'))
-
-console.log(React);
-console.log(ReactDOM);
+ReactDOM.render(thingsToDo1, document.getElementById('things'));
