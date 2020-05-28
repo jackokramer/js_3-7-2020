@@ -1,0 +1,12 @@
+{
+    "name": "Amanda",
+    "age": 28,
+    "isProgramer": true,
+    "hbbies": ["Weight lifting", "Anime"],
+    "friends": [{
+        "name": "Jack",
+        "age": 30,
+        "isProgrammer": true,
+        "hobbues": ["running", "surfing"]
+    }]
+}
