@@ -12,7 +12,49 @@ code {
     monospace;
 }
 
-.square{
-  height: 728px;
-  width: 274px;
+
+.bluebox{
+  height:200px;
+  width:200px;
+  background-color: blue;
+  display: inline-block;
+  margin-top:50px;
+}
+
+.white{
+  color: white;
+  font-weight: 900;
+  font-size: large;
+}
+
+.redbox{
+  height:200px;
+  width:200px;
+  background-color: red;
+  display: inline-block;
+  margin-top:50px;
+}
+
+.blue{
+  color: blue;
+  font-weight: 800;
+}
+
+.pinkbox{
+  height:200px;
+  width:200px;
+  background-color: pink;
+  display: inline-block;
+  margin-top:50px;
+}
+
+.green{
+  color: forestgreen;
+  font-weight: 900;
+}
+
+.App-link{
+  display: flex;
+  margin-top: 20px;
+  margin-left: 420px;
 }
