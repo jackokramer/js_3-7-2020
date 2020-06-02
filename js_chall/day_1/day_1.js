@@ -1,12 +1,12 @@
 function addBoarder(array){
-    let boarders =[]
-    array.map((item) => boarders.push("*$"))
-    const  newArray = [
-        "****",
-        ...boarders,
-        "****"
-    ]
-    return newArray
+    const wall = "*".reapeat(array[0].length +2);
+    array.unshif(wall);
+    array.push(wall);
+
+    for(let x =1; x < array.length-1; x++){
+        arr[x] = "*".concat(array[x], '*');
+    }
+    return array
 }
 
 /***
