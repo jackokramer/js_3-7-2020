@@ -1,5 +1,11 @@
-fucntion addTwoDigits(num){
-    //code goes here
+fucntion addTwoDigits(num) {
+    const nums = num.toString().split('');
+
+    return parseInt(num[0])+ parseInt(nums[1]);
+    // to return more than two digits
+    //return nums.reduce((total, value)=>{
+    //    return parseInt(total)+ parseInt(value);
+    //}, 0)
 }
 
 /**
