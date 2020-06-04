@@ -1,5 +1,17 @@
 function firstDuplicate(nums){
+    const firstDup = {};
+    // ittereate through nums
+    for(let num of nums){
+        if(firstDup.hasOwnProperty(num)){
+            // return duplicated num
+            return num
+        }
+        //return duplcated nums
+        firstDup[num] = num;
+    }
 
+    // don't find a duplicate return -1
+    return -1;
 }
 
 
