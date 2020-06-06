@@ -1,11 +1,18 @@
 function sumAllPrimes(num){
-    let primeNum = []
-    for(let x = 0; num.length>x; x++){
-        if(num[x]%2 === 1){
-            num++
+    let primeNum = 0
+    for(let x = 2; num>x; x++){
+        for(let o =2; o<=x; o++){
+            if(x===o){
+                primeNum += o;
+            }
+        if(x%o === 0){
+            break;
+        }
+        //if(num[x]%2 === 1){
+        //    num++
         }
     }
-    return num;
+    return primeNum;
 }
 
 /** 
@@ -22,6 +29,8 @@ function sumAllPrimes(num){
 //    )
 //})
 
-console.log(sumAllPrimes(10));
+//console.log(sumAllPrimes(10));
+console.log(sumAllPrimes(1920213));
+
 //output should be 7,5,3,2 = 17 or 18 if you count one.
 
