@@ -29,11 +29,13 @@ console.log(reverseArr([2,5,19, 23, 9]));
 //Outlook: Negative - Given an array, create and return a new one containing all the values of the original array, but make them all negative (not simply multiplied by -1). Given [1,-3,5], return [-1,-3,-5].
 
 function outlookNeg(arr){
+    let newArr =[]
     for(let x = 0; x<arr.length; x++){
         if(arr[x]>0){
             arr[x]= arr[x]*-1;
         }
+        newArr.push(arr[x])
     }
-    return arr;
+    return newArr;
 }
 console.log(outlookNeg([-1,2,56,21,2,3,2]));
