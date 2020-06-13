@@ -39,3 +39,44 @@ function outlookNeg(arr){
     return newArr;
 }
 console.log(outlookNeg([-1,2,56,21,2,3,2]));
+
+// Always Hungry - Create a function that accepts an array, and prints "yummy" each time one of the values is equal to "food".  If no array values are "food", then print "I'm hungry" once.
+
+function alwaysHung(arr){
+    for(let x = 0; arr.length>x; x++){
+        if(arr[x] == 'food'){
+            console.log('This taste`s good')
+        } else {
+            console.log('I`m hungry')
+        }
+    }
+    return arr;
+}
+
+console.log(alwaysHung(['grow', 2, 4, 'food', false]));
+
+// alternative
+//function hungry(arr){
+// let gotFood= false;
+//for(let x = 0; x< arr.length; x++){
+//    if(arr[x] == 'food'){
+    // console.log('this tastes good');
+    //gotFood = true;
+//      }
+//  }   
+// if(gotFood== false){
+    //console.log('I`m hungry')
+//}
+//return arr
+//}
+
+//Previous Lengths - You are passed an array (similar to saying 'takes in an array' or 'given an array') containing strings.  Working within that same array, replace each string with a number - the length of the string at the previous array index - and return the array.  For example, previousLengths(["hello", "dojo", "awesome"]) should return ["hello", 5, 4]. Hint: Can for loops only go forward?
+
+function previousLength(arr){
+    for(let x = arr.length-1; x > 0; x--){
+        arr[x] = arr[x-1].length;
+    }
+    return arr;
+}
+
+console.log(previousLength(['hello', 'vertigo', 'I can', 'feel']));
