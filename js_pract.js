@@ -80,3 +80,56 @@ function previousLength(arr){
 }
 
 console.log(previousLength(['hello', 'vertigo', 'I can', 'feel']));
+
+//// Always Hungry - Create a function that accepts an array, and prints "yummy" each time one of the values is equal to "food".  If no array values are "food", then print "I'm hungry" once.
+
+function alwaysTired(arr){
+    let always = false;
+    for(let z =0; z< arr.length; z++){
+        if(arr[z]== 'food'){
+            console.log('delicious')
+            always = true;
+        } else{
+            console.log('I`m hungry')
+            always = true;
+        }
+    }
+    return arr;
+}
+
+console.log(alwaysTired(['sleep', 'nap', 'dood', 'food']));
+
+// //Previous Lengths - You are passed an array (similar to saying 'takes in an array' or 'given an array') containing strings.  Working within that same array, replace each string with a number - the length of the string at the previous array index - and return the array.  For example, previousLengths(["hello", "dojo", "awesome"]) should return ["hello", 5, 4]. Hint: Can for loops only go forward?
+
+function previousLength(arr){
+    for(let x = arr.length-1; x>0; x--){
+        arr[x]= arr[x-1].length;
+    }
+    return arr;
+}
+
+// increment in seconds Given an array of numbers arr, add 1 to every other element, specifically those whose index is odd (arr[1], arr[3], arr[5], etc).  Afterward, console.log each array value and return arr.
+
+//function incrementInSeconds(arr){
+//    let count = 0
+ //   for(let x = 0; arr.length>x; x++){
+ //       if(arr[x]%2 === 1){
+ //           console.log(arr[x]);
+ //           count++
+ //       }
+  //  }
+//    return arr;
+//}
+
+
+function incrementInSeconds(arr){
+    for(let x = 0; arr.length>x; x+2){
+        arr[x] = arr[x]+2
+    }
+    for(let x = 0; arr.length>x; x++){
+        console.log(arr[x]);
+    }
+    return arr;
+}
+console.log(incrementInSeconds([1,2,4,2,3,5]));
+
