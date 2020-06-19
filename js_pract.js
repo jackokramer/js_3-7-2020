@@ -11,7 +11,7 @@ function countPost(arr){
     return arr;
 }
 
-console.log(countPost(2,2,1,-2,-7,-11,2));
+//console.log(countPost(2,2,1,-2,-7,-11,2));
 
 // Reverse Array - Given an array, write a function that reverses its values, in-place.  Example: reverse([3,1,6,4,2]) returns the same array, but now contains values reversed like so... [2,4,6,1,3].  Do this without creating an empty temporary array.  (Hint: you'll need to swap values).
 
@@ -24,7 +24,7 @@ function reverseArr(arr){
     return arr;
 }
 
-console.log(reverseArr([2,5,19, 23, 9]));
+//console.log(reverseArr([2,5,19, 23, 9]));
 
 //Outlook: Negative - Given an array, create and return a new one containing all the values of the original array, but make them all negative (not simply multiplied by -1). Given [1,-3,5], return [-1,-3,-5].
 
@@ -38,7 +38,7 @@ function outlookNeg(arr){
     }
     return newArr;
 }
-console.log(outlookNeg([-1,2,56,21,2,3,2]));
+//console.log(outlookNeg([-1,2,56,21,2,3,2]));
 
 // Always Hungry - Create a function that accepts an array, and prints "yummy" each time one of the values is equal to "food".  If no array values are "food", then print "I'm hungry" once.
 
@@ -53,7 +53,7 @@ function alwaysHung(arr){
     return arr;
 }
 
-console.log(alwaysHung(['grow', 2, 4, 'food', false]));
+//console.log(alwaysHung(['grow', 2, 4, 'food', false]));
 
 // alternative
 //function hungry(arr){
@@ -79,7 +79,7 @@ function previousLength(arr){
     return arr;
 }
 
-console.log(previousLength(['hello', 'vertigo', 'I can', 'feel']));
+//console.log(previousLength(['hello', 'vertigo', 'I can', 'feel']));
 
 //// Always Hungry - Create a function that accepts an array, and prints "yummy" each time one of the values is equal to "food".  If no array values are "food", then print "I'm hungry" once.
 
@@ -97,7 +97,7 @@ function alwaysTired(arr){
     return arr;
 }
 
-console.log(alwaysTired(['sleep', 'nap', 'dood', 'food']));
+//console.log(alwaysTired(['sleep', 'nap', 'dood', 'food']));
 
 // //Previous Lengths - You are passed an array (similar to saying 'takes in an array' or 'given an array') containing strings.  Working within that same array, replace each string with a number - the length of the string at the previous array index - and return the array.  For example, previousLengths(["hello", "dojo", "awesome"]) should return ["hello", 5, 4]. Hint: Can for loops only go forward?
 
@@ -131,5 +131,17 @@ function incrementInSeconds(arr){
     }
     return arr;
 }
-console.log(incrementInSeconds([1,2,4,2,3,5]));
+//console.log(incrementInSeconds([1,2,4,2,3,5]));
 
+//Print One, Return Another - Build a function that takes in an array of numbers.  The function should print the second-to-last value in the array, and return the first odd value in the array.
+
+function printOneReturnAnother(arr){
+    let empty = [];
+    for(let x = 0; arr.length>x; x++){
+        console.log(arr.length - x -1);
+        return arr[x]-1;
+    }
+    return  arr;
+}
+
+console.log(printOneReturnAnother([1,2,4,1,2,45,31,98,221]))
