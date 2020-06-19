@@ -136,12 +136,46 @@ function incrementInSeconds(arr){
 //Print One, Return Another - Build a function that takes in an array of numbers.  The function should print the second-to-last value in the array, and return the first odd value in the array.
 
 function printOneReturnAnother(arr){
-    let empty = [];
+    console.log(arr.length-2);
     for(let x = 0; arr.length>x; x++){
-        console.log(arr.length - x -1);
-        return arr[x]-1;
+        if(arr[x]%2 == 1){
+            return arr[x];
+        }
     }
-    return  arr;
 }
 
 console.log(printOneReturnAnother([1,2,4,1,2,45,31,98,221]))
+
+//Reverse Array - Given an array, write a function that reverses its values, in-place.  Example: reverse([3,1,6,4,2]) returns the same array, but now contains values reversed like so... [2,4,6,1,3].  Do this without creating an empty temporary array.  (Hint: you'll need to swap values).
+
+function reverseArr(arr){
+    for(let x = 0; arr.length/2>x; x++){
+        let temp = arr[x];
+        arr[x] = arr[arr.length-1-x];
+        arr[arr.length-1-x] = temp;
+    }
+    return arr
+}
+
+console.log(reverseArr([1,2,3,1,5,22,90,239, 342]))
+
+//Swap Toward the Center - Given an array, swap the first and last values, third and third-to-last values, etc.  Example: swapTowardCenter([true,42,"Ada",2,"pizza"]) turns the array into ["pizza", 42, "Ada", 2, true].  swapTowardCenter([1,2,3,4,5,6]) turns the array into [6,2,4,3,5,1].  No need to return the array this time.
+
+function swapTowardCenter(arr){
+    let poop = [];
+    for(let z = 0; arr.length>z; z++){
+        arr[x] = arr.length -1;
+        arr[arr.length-1] = arr[x];
+        arr.length - x-x;
+    }
+}
+
+//doublevision
+
+function doubleVision(arr){
+    let newArra = []
+    for(let x = 0; arr.length>x; x++){
+        newArra.push(arr[x]*2);
+    }
+    return newArra;
+}
