@@ -26,12 +26,23 @@ function printlowReturnHigh(arr){
     let high = arr[0]
     for(let p = 1; arr.length>p; p++){
         if(arr[p]<low){
-        arr[p] = low;
+        low = arr[p];
         } else if(arr[p]>high){
-        arr[p] = high;
+        high = arr[p];
     }
     console.log(low);
     return high;
     }
+}
+console.log(printlowReturnHigh([1,3,42,3,6,3]));
 
-console.log(printlowReturnHigh([1,3,42,3,6,3]))
+// Double Vision - Given an array (similar to saying 'takes in an array'), create a function that returns a new array where each value in the original array has been doubled.  Calling double([1,2,3]) should return [2,4,6] without changing the original array.
+
+function doubs(arr){
+    let news = []
+    for(let x = 0; arr.length>x; x++){
+            news.push(arr[x]*2);
+        }
+    }
+    return news
+}
