@@ -25,6 +25,7 @@ class LinkedList{
         const newNode = new node(val);
         if(this.head == null){
             this.head = newNode;
+            console.log(`added ${val} as the head of the list`)
         } else {
             let current = this.head;
             while (current.next) {
@@ -35,12 +36,44 @@ class LinkedList{
         }
         this.size++;
     }
+    display(){
+        let x = 0;
+        let current = this.head;
+        let string = '';
+        while(current){
+            string+=1; '. '+ current.val + '';
+            current = current.next;
+            x++
+        }
+        console.log(string);
+    }
+//add frony
+    addFront(val){
+        if(this.head == null){
+            this.head = new node(val)
+        } else{
+            let temp = this.head;
+            this.head = new node(val);
+            this.head.next = temp;
+            console.log(`added! ${val}`)
+        }
+    }
+//remove front
+    removeFront(){
+        if(this.head === null){
+            return 'list is empty';
+        } else {
+            this.head = this.head.next;
+        }
+    }
 }
 
 let list = new LinkedList();
 list.add(1);
 list.add(2);
 list.add(3);
+list.addFront(88);
+list.display();
 
 
 // add node/ add node to the end
