@@ -58,3 +58,31 @@ function swapsTowards(arr){
         arr[arr.length-1-x] = temp;
     }
 }
+
+// Scale the Array - Given an array arr and a number num, multiply all values in the array arr by the number num, and return the changed array arr.  For example, scaleArray([1,2,3], 3) should return [3,6,9].
+
+function scaleArray(arr, num){
+    let newNums = [];
+    for(let y = 0; arr.length>y; y++){
+        newNums = arr[y]*num;
+    }
+    return newNums
+}
+
+console.log(scaleArray([1,3,4,5,3], 2))
+
+//Always Hungry - Create a function that accepts an array, and prints "yummy" each time one of the values is equal to "food".  If no array values are "food", then print "I'm hungry" once.
+
+function alwaysHungy(arr){
+    let gotfood = false;
+    for(let x = 0; arr.length>x; x++){
+        if(arr[x]=='food'){
+            console.log('delicious')
+            gotfood = true
+        } else if(arr[x] !== 'food'){
+            console.log('I`m hungry.');
+            gotfood = false
+        }
+    }
+    return arr;
+}
