@@ -52,7 +52,7 @@ function countPostives(arr){
 // Swap Toward the Center - Given an array, swap the first and last values, third and third-to-last values, etc.  Example: swapTowardCenter([true,42,"Ada",2,"pizza"]) turns the array into ["pizza", 42, "Ada", 2, true].  swapTowardCenter([1,2,3,4,5,6]) turns the array into [6,2,4,3,5,1].  No need to return the array this time.
 
 function swapsTowards(arr){
-    for(let x = 0; arr.length/2>x; x+2){
+    for(let x = 0; arr.length/2>x; x+=2){
         let temp = arr[x];
         arr[x] = arr[arr.length-1-x];
         arr[arr.length-1-x] = temp;
@@ -62,11 +62,12 @@ function swapsTowards(arr){
 // Scale the Array - Given an array arr and a number num, multiply all values in the array arr by the number num, and return the changed array arr.  For example, scaleArray([1,2,3], 3) should return [3,6,9].
 
 function scaleArray(arr, num){
-    let newNums = [];
+    //let newNums = [];
     for(let y = 0; arr.length>y; y++){
-        newNums = arr[y]*num;
+        //newNums = arr[y]*num;
+        arr[y] = arr[y]*num;
     }
-    return newNums
+    return arr;
 }
 
 console.log(scaleArray([1,3,4,5,3], 2))
