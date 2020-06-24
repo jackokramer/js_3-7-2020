@@ -57,6 +57,7 @@ class LinkedList{
             this.head.next = temp;
             console.log(`added! ${val}`)
         }
+        this.size ++;
     }
 //remove front
     removeFront(){
@@ -66,6 +67,32 @@ class LinkedList{
             this.head = this.head.next;
         }
     }
+
+//INSERT AT
+    insertAt(val, index){
+        if(index > 0 && index>this.size){
+            console.log('this index is out of range.');
+            return;
+        }
+        let newNode = new node(val);
+        let current = this.head;
+        let prev;
+        if(index === 0){
+            newNode.next = head;
+            this.head = newNode;
+        } else{
+            current = this.head;
+            let position = 0;
+            while(position<index){
+                position++; 
+                prev = current;
+                current = current.next;
+            }
+            newNode.next = current;
+            prev.next = newNode;
+        }
+    this.size++;
+    }
 }
 
 let list = new LinkedList();
@@ -73,6 +100,10 @@ list.add(1);
 list.add(2);
 list.add(3);
 list.addFront(88);
+list.display();
+//list.removeFront();
+//list.display();
+list.insertAt(99,1);
 list.display();
 
 
