@@ -29,7 +29,7 @@ function newYears(num){
     newYears(num -1);
 }
 
-newYears(5);
+//newYears(5);
 
 //factorial 4 = 1*2*3*4=24
 
@@ -42,7 +42,7 @@ function factorial(number){
     return number * factorial(number-1);
 }
 
-console.log(factorial(5));
+//console.log(factorial(5));
 
 // differnce between without using recursion
 function factor(nums){
