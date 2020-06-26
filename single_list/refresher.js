@@ -96,6 +96,23 @@ class LinkedList{
         }
         this.size++;
     }
+    maxMinAvg(){
+        let sum = 0;
+        let max = this.head.value;
+        let min = this.head.value;
+        let runner = this.head;
+        while(runner){
+            sum += runner.val;
+            if(runner.val>max){
+                max=runner.val;
+            }
+            else if(runner.value < min){
+                min = runner.value;
+            }
+            runner = runner.next;
+        }
+        return `${max}, ${min}, avg:${sum/this.length()}:`
+    }
 }
 
 let list = new LinkedList();
