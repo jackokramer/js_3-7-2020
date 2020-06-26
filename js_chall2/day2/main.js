@@ -1,4 +1,4 @@
-function add(param1, param2){
+function allLongestStrings(array){
     // write code here
 }
 
@@ -6,33 +6,15 @@ function add(param1, param2){
 Test Suite
 */
 
-desctibe('add()',()=>{
-    it('adds two numbers', ()=>{
-        //arange
-        const num1 = 1;
-        const num2 = 2;
-
-        //act 
-        const result = add(num1, num2);
-
-        //log
-        console.log('result: ', result);
-
-        //assert
-        expect(result).toBe(3)
-    });
-    xit('adds any amount of numbers', ()=>{
-        // arrange
-        const num1 = 1;
-        const num2 = 2;
-        const num3 = 3;
-
+desctibe('allLongestStrings()',()=>{
+    it('returns all the longest strings', () =>{
+        //arrange
+        const strings = ['aba','aa','adhd','vcd','abba', 'a'];
         //act
-        const result = add(num1, num2, num3);
-
-        console.log('result: ', result);
-
-        //assert 
-        expect(result).toBe(6);
+        const result = allLongestStrings(strings);
+        //log 
+        console.log('results:', result);
+        //assert
+        expect(result).toEqual(['aba', 'vcd', 'aba']);
     });
 });
