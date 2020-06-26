@@ -1,5 +1,8 @@
-function add(param1, param2){
-    // write code here
+function add(...nums){
+    let sum =0;
+
+    nums.forEach((num)=> + num);
+    return sum
 }
 
 /*
@@ -21,7 +24,7 @@ desctibe('add()',()=>{
         //assert
         expect(result).toBe(3)
     });
-    xit('adds any amount of numbers', ()=>{
+    it('adds any amount of numbers', ()=>{
         // arrange
         const num1 = 1;
         const num2 = 2;
