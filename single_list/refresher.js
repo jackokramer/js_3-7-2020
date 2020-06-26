@@ -113,6 +113,29 @@ class LinkedList{
         }
         return `${max}, ${min}, avg:${sum/this.length()}:`
     }
+    back(){
+        let runner = this.head;
+        while(runner.next){
+            runner = runner.next
+        }
+        return runner.val
+    }
+    removeBack(){
+        let runner = this.head;
+        while(runner.next.next){
+            runner = runner.next
+        }
+        runner.next = null;
+        return this
+    }
+    addback(){
+        let runner = this.head;
+        while(runner.next){
+            runner = runner.next
+        }
+        runner.next = new Node(val);
+        return this
+    }
 }
 
 let list = new LinkedList();
