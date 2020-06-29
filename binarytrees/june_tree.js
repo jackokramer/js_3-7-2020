@@ -77,7 +77,8 @@ class BST{
         console.log(root.val);
     }
     search(val, root=this.root){
-        if(this.root === null) return false;
+        if(root === null) 
+        return false;
 
         if(val<root.val){
             return this.search(val, root.left);
