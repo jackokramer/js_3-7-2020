@@ -1,15 +1,26 @@
 function alternatingSums(array){
     // write code here
+    let oddSum= 0
+    let evenSum=0
+
+    for(let x = 0; x<array.length; x++){
+        if(x%2 === 0){
+            evenSum += array[x];
+        } else {
+            oddSum +=array[x];
+        }
+    }
+    return [evenSum, oddSum];
 }
 
 /*
 Test Suite
 */
 
-desctibe('alternatingSums()',()=>{
+describe('alternatingSums()',()=>{
     it('returns alternating sums of even and odd', () =>{
         //arrange
-        const num = [50,60,60,46,70];
+        const nums = [50,60,60,45,70];
         //act
         const result = alternatingSums(nums);
         //log 
