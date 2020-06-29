@@ -114,6 +114,50 @@ class linkedList{
         }
         console.log(str);
     }
+    ////Add  Front Node 
+    addfront(val){
+        if(this.head === null){
+            this.head = new Node(val)
+        } else {
+            let temp = this.head;
+            this.head = new Node(val);
+            this.head.next = temp;
+            console.log(`Added ${val}`)
+        }
+    }
+// remove Front
+    removeFront(){
+        if(this.head === null){
+            return 'list is empty';
+        } else{
+            this.head = this.head.next;
+        }
+    }
+// insert At
+    insert(val, index){
+        if(index > 0 && index > this.size){
+            console.log('index is out of range');
+            return;
+        }
+        let newNode = new Node(val);
+        let current = this.head;
+        let previous;
+        if(index === 0){
+            newNode.next = head;
+            this.head = newNode;
+        } else { // where the fun lies
+            current = this.head;
+            let position = 0;
+            while(position < index){
+                position++;
+                previous = current;
+                current = current.next;
+            }
+            newNode.next = current;
+            previous.next = newNode;
+        }
+        this.size++;
+    }
 }
 
 let list = new linkedList();
@@ -121,13 +165,12 @@ list.add(1);
 list.add(2);
 list.add(3);
 list.display();
+list.addfront(88);
+list.display();
+list.removeFront();
+list.display();
+list.insert(99, 2);
+list.display();
 
-//Add Node / Add Node to the End
-
-
-//Add Front
-
-// remove Front
-
-// insertAt
+// Add Node to the End
 
