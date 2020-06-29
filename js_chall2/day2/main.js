@@ -1,12 +1,25 @@
 function allLongestStrings(array){
-    // write code here
+    // find the longest length and 
+    const longestWords = [];
+    let longestLength = 0;
+    for(let word of array){
+        longestLength = word.length > longestLength ? word.length: longestLength;
+    }
+
+    //return the longest strings
+    for(let word of array){
+        if(longestLength === word.length){
+            longestWords.push(word)// error here..
+        }
+    }
+    return longestWords;
 }
 
 /*
 Test Suite
 */
 
-desctibe('allLongestStrings()',()=>{
+describe('allLongestStrings()',()=>{
     it('returns all the longest strings', () =>{
         //arrange
         const strings = ['aba','aa','adhd','vcd','abba', 'a'];
