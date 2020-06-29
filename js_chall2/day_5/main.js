@@ -32,3 +32,10 @@ describe('caseInsensitivePalindrome()',()=>{
         expect(result).toBe(false);
     }
 });
+
+/* Hints
+-join()
+-reverse()
+-toLowerCase()
+-split()
+*/
