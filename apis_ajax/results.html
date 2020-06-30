@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Color Clicker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $.get("https://pokeapi.co/api/v2/pokemon/1/", function(res){
+            let html_str ="";
+            html_str += '<h4>Types</h4>';
+            html_str += '<ul>';
+            for(let x = 0; x < res.types.length; x++){
+                html_str = "<li>" + res.types[x].type.name + "</li>";
+            }
+            html_str = "</ul>";
+            $("#bulbasaur").html(html_str);
+        }, "json");
+    })
+    </script>
+</head>
+<body>
+    <h2 class="text-center p-2">Pokemon Snap</h2>
+    <div id="bulbasair">
+    </div>
+</body>
+</html>
