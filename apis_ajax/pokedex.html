@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedeck</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            for(let x = 1; x<151; x++){
+                $('#pokemon').append('<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${x}.png"id="${i}"')
+            }
+            $(document).on("click", "img", function(){
+                let id = this.id
+                $get("http://pokeapi.co/api/v1/pokemon/" + id, function(res){
+                    let html_str = "";
+                    html_str += `<div id="img"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${id}.png" id="${id}"></div>`;               })
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
