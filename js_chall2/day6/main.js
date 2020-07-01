@@ -2,9 +2,12 @@ function encloseInBrackets(str){
     //write code here
 
     // solution 1
-    // solution2 
+   // const soultion1 ='(' + str + ')'; // es5
+    // solution2
+   const  solution2 = `(${str})`;  //ES6
     // Solutuion3
-
+    //const solution3 = '('.concat(str, ')');
+    //return solution3;
 }
 
 /*
@@ -21,6 +24,6 @@ describe('cencloseInBrackets()',()=>{
         //log 
         console.log('result:', result);
         //assert
-        expect(result).toBe(('Yo'));
+        expect(result).toBe('(Yo)');
     });
 });
