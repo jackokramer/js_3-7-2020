@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>WeatherAPP API</title>
+    <script>
+        $(document).ready(function() {
+            $('h2').html('Check the weather');
+            $('h2').click(function(){
+                console.log('h2 is clicked')
+                $('p').toggle();
+            })
+        $('form').submit(function() {
+            let api_key = '38ed520286ab541243ddee4e7fe64fab';
+            let city = $('input#city').val();
+        $.get('http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${api_key}', function(res) {
+            // your code here
+            let html = '';
+            html += `<p>'${res['name']}: $(res['weather'][0]['description']}</p>';`
+            html += `<p>'Temperature:${res['name']}F </p>';`
+            html += `<p> Coord${res['coord'].lat} ${res['coord'].lon}`
+            $('#results').html(html);
+        }, 'jsonp');
+        // don't forget to return false so the page doesn't refresh
+        return false;
+    });
+});
+    </script>
+</head>
+<body>
+    <div class="jumbotron">
+        <div id="weather">
+            <div class="runner text-center">
+                <h2>Weather Reader</h2>
+                <form action="/weather" method="post">
+                    <label for="city">City:
+                        <p>City: <input type="text" name="city" id="city"></p>
+                    </label>
+                    <p><input type="submit" name="Submit"></p>
+                </form>
+            </div>
+        </div>
+        <div id="results"></div>
+    </div>
+</body>
+</html>
