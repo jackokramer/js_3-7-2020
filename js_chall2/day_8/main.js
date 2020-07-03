@@ -2,6 +2,14 @@
 
 function firstDigit(str){
     //write code here.
+    const strNums = ['1','2','3','4','5','6','7', '8', '9', '10']
+    const chars = str.split('');
+
+    for(const char of chars) {
+        if(strNums.includes(char)){
+            return char;
+        }
+    }
 }
 
 /**
