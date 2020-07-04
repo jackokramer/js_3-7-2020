@@ -1,5 +1,10 @@
 function largestNum(num){
     //write code here.
+    const placeHolder = "9".repeat(num);
+    //for(let x = 0; c< num; x++){
+    //    placeHolder = placeHolder.concat('99')
+    //}
+    return parseInt(placeHolder);
 }
 
 /**TEST SUITE 
