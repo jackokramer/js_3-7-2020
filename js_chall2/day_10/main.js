@@ -1,4 +1,4 @@
-function largestNum(num){
+function maxMultiple(divsor, bound){
     //write code here.
 }
 
@@ -6,18 +6,19 @@ function largestNum(num){
  * 
 */
 
-describe('largestNum()', () => {
-    it('returns largest positive integer possible for digit count', ()=> {
+describe('maxMultiple()', () => {
+    it('returns largest integer up to boundary', ()=> {
         //arrange
-        const num = 2;
+        const divsor = 3;
+        const bound = 10;
 
         //act
-        const result = largestNum(num);
+        const result = maxMultiple(divisor, bound);
 
         // log
         console.log("result: ", result);
 
         //assert
-        expect(result).toBe(99);
+        expect(result).toBe(9);
     })
 })
