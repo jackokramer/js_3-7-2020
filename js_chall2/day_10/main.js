@@ -17,7 +17,7 @@ describe('maxMultiple()', () => {
         const bound = 10;
 
         //act
-        const result = maxMultiple(divisor, bound);
+        const result = maxMultiple(divsor, bound);
 
         // log
         console.log("result: ", result);
