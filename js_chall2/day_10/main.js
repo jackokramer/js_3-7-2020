@@ -1,5 +1,9 @@
 function maxMultiple(divsor, bound){
     //write code here.
+    const remainder = bound % divsor;
+
+    return bound - remainder;
+
 }
 
 /**TEST SUITE 
