@@ -25,6 +25,6 @@ function alternatingSums(array){
          //log
          console.log('result:', result);
          //assert
-         expect(result).toEqual([182, 133]);
+         expect(result).toEqual([133, 182]);
      })
  })
