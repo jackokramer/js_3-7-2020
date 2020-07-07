@@ -2,8 +2,15 @@ function caseInsensitvePalin(str){
     // write code here
     //make str caseless
     const caslessStr = str.toLowerCase();
-    const reverseStr = caslessStr.split(''.reverse().join(''));
-    return caslessStr === reverseStr;
+    //const reverseStr = caslessStr.split(''.reverse().join(''));
+    //return caslessStr === reverseStr;
+    //second solution
+    let reverseStr = '';
+
+    for(let x = caslessStr.length; x>=0; x++){
+        reverseStr += caselessStr[x];
+    }
+    return caselessStr === reverseStr;
 }
 
 describe('caseInsensitvePalin()', () => {
