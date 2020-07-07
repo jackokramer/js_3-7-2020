@@ -23,8 +23,7 @@ function alternatingSums(array){
          // act
          const result = alternatingSums(nums);
          //log
-         console.log('results: ', results);
-
+         console.log('result:', result);
          //assert
          expect(result).toEqual([182, 133]);
      })
