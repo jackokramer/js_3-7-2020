@@ -1,5 +1,19 @@
 function allLongestStr(array){
     //write code here.
+    //find the longest
+    const longestWord =[];
+    let longestLength = 0;
+
+    for(let word of array){
+        longestLength = word.length > longestLength ? word.longth : longestLength;
+    }
+    for(let word of array){
+        if(longestLength === word.length){
+            longestWord.push(word)
+        }
+    }
+    //return longest string
+    return longestLength;
 }
 
 /**
