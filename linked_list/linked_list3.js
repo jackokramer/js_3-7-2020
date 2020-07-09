@@ -28,6 +28,19 @@ class singleList{
 
     //SList: Add Back
     //Create a function that creates a ListNode with given value and inserts it at end of a linked list.
+    addToBack(value){
+        let newNode = new Node(value);
+        let current = this.head;
+        //check if the list is empty
+        if(this.isEmpty()){
+            this.addToFront(value);
+            return;
+        }
+        while(current.next){
+            current = current.next;
+        }
+        current.next = newNode;
+    }
 }
 
 firstEx =  new singleList(firstNode);
