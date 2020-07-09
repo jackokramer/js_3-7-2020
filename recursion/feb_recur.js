@@ -40,3 +40,51 @@ function loopArray(arr, x=0){
 
 loopArray([2,4,6,8,10])
 // solution variable needs to be  declared outside the function or as a parameter
+
+//flood fill
+
+let canvas2D = [[3,2,3,4,3],
+                [2,3,3,4,0],
+                [7,3,3,5,3],
+                [6,5,3,4,1],
+                [1,2,3,3,3]];
+
+console.log(`Begining with: ${canvas2D}`)
+//parameters: canvas, startPoint, 
+
+/* center point (start)
+canvas2D[2][2]
+[3,4]
+canvas[start[0]]
+*/
+function floodFill(canvas, start, newColor){
+    let oldColor = canvas[start[0]][start[1]];
+    canvas[start[0]][start[1]]=newColor;
+    //left movement
+    if(start[1]>=0){
+        if(canvas[start[0]][start[1]-1] == oldColor){
+            floodFill(canvas, [start[0], start[[1]-1]], newColor)
+        }
+    }
+    //right movement
+    if(start[1]+1< canvas[0].length){
+        if(canvas[start[0]][start[1]+1] == oldColor){
+            floodFill(canvas, [start[0], start[[1]+1]], newColor)
+        }
+    }
+    //down movement
+    if(start[0]+1< canvas.length){
+        if(canvas[start[0]+1][start[1]] == oldColor){
+            floodFill(canvas, [start[0]+1, start[1]], newColor)
+        }
+    }
+    //up movement
+    if(start[0]-1 >= canvas.length){ // equal gives you the first value
+        if(canvas[start[0]-1][start[1]] == oldColor){
+            floodFill(canvas, [start[0]-1, start[1]], newColor)
+        }
+    }
+    return canvas
+}
+
+console.log(floodFill(canvas2D, [2,2], 9))
