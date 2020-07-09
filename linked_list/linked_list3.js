@@ -15,7 +15,7 @@ class singleList{
     //Create a function that accepts a ListNode pointer and returns the last value in the list.
     addBack(value){
         let runner = this.head;
-        while(runner.next){
+        while(runner.next){ // issue lies here....
             console.log(`this is the current value${runner.value}, this is the next node ${runner.next}`)
             runner = runner.next;
         }
