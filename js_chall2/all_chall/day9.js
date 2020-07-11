@@ -1,5 +1,13 @@
 function largestNums(num){
     //write code here
+    //solution 1
+    /*let placeholder = '';
+    for(let x = 0; x<num; x++){
+        placeholder = placeholder.concat('9');
+    } */
+    //solution 2
+    const  placeholder = '9'.repeat(num);
+    return parseInt(placeholder);
 }
 
 describe('largestNums()', () =>{
