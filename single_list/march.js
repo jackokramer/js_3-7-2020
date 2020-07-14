@@ -50,8 +50,37 @@ class  SLL{
             newNode.next = this.head;
             this.head = newNode;
         }
+        addToBack(value){
+            let newNode =  new Node(value);
+            let current = this.head;
+            current = current.next;
+            while(current){
+                current = current.next;
+            }
+        }
+        // 0(1) - array is 0(N)
+        removeFront(){
+            if(this.head){
+                this.head = this.head.next;
+            }
+        }
         displayValues(){
             //display each value in the list of nodes
+            let current = this.head;
+            if(current == null){
+                console.log("[]")
+                return;
+            }  let output = "[";
+            //loop list;
+            while(current){
+                output += current.value;
+                if(current.next){
+                    output += ", ";
+                }
+                current = current.next;
+            }
+            output += "]";
+            console.log(output);
         }
 }
 
@@ -63,4 +92,6 @@ myList.addToFront(90);
 
 console.log(myList)
 
+myList.displayValues();
+myList.removeFront();
 

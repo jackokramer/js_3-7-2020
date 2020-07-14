@@ -15,7 +15,7 @@ class singleList{
 //List: Contains
 //Sam thinks Tad might be somewhere in a very long line waiting to attend the Superman movie. Given a ListNode pointer and a val, return whether val is found in any node in the list.
     contains(value){
-        let val = new listNode;
+        let val = new listNode();
         if(this.head = value || this.next){
             return val;
         } else {
@@ -28,5 +28,23 @@ class singleList{
 
 // SList: Display
 //Create display(node) for debugging that returns a string containing all list values. Build what you wish console.log(myList) did!
-
+    displayVal(){
+        let current = this.head;
+        if(current === null){
+            console.log("[]");
+            return;
+        }
+        let output = "[";
+        while(current){
+            output += current.value;
+            if(current.next){
+                output += " . ";
+            }
+            current = current.next;
+        }
+        output += "]";
+        console.log(output);
+    }
+    //loop list
+   
 }
