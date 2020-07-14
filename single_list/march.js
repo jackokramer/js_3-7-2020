@@ -53,10 +53,19 @@ class  SLL{
         addToBack(value){
             let newNode =  new Node(value);
             let current = this.head;
-            current = current.next;
-            while(current){
+            //check if list is empty
+            if(this.isEmpty()){
+                this.addToFront(value);
+                return;
+            }
+            // move current to the last node
+            while(current.next){
                 current = current.next;
             }
+            current.next = newNode;
+        }
+        isEmpty(){
+            return this.head === null;
         }
         // 0(1) - array is 0(N)
         removeFront(){
@@ -89,6 +98,7 @@ myList.addToFront(17);
 myList.addToFront(5);
 myList.addToFront(42);
 myList.addToFront(90);
+myList.addToBack(19);
 
 console.log(myList)
 
