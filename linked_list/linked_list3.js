@@ -19,8 +19,7 @@ class singleList{
             console.log(`this is the current value${runner.value}, this is the next node ${runner.next}`)
             runner = runner.next;
         }
-        runner.next = new listNode(value);
-        return this
+        return runner.value
     }
 
     //SList: Remove Back
