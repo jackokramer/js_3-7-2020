@@ -28,3 +28,15 @@ function rSigma(num){
 let result = rSigma(7)
 
 console.log(result)
+
+function displayArrVal(arr, x=0){ // recursion using the function within the function
+    if(x >= arr.length){
+        return;
+    }
+    console.log(arr[x])
+    displayArrVal(arr, x+1);
+    }
+
+console.log(displayArrVal([2,4,5,75,4,12]))
+
+// iterative may work better here. but good to try recursive
