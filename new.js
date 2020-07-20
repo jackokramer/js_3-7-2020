@@ -119,27 +119,32 @@ function negaTive(arr){
 //Always Hungry - Create a function that accepts an array, and prints "yummy" each time one of the values is equal to "food".  If no array values are "food", then print "I'm hungry" once.
 
 function alwaysHungry(arr){
-    let gotFood = false
+    let gotFood = false;
     for(let x = 0; arr.length>x; x++){
         if(arr[x] === 'food'){
             console.log('Delicious')
-        } else{
+            gotFood = true;
+        } 
+        if(gotFood == false){
             console.log(`I'm hungry like the wolf.`)
         }
-    }
-    return arr;   
-}
-//Swap Toward the Center - Given an array, swap the first and last values, third and third-to-last values, etc.  Example: swapTowardCenter([true,42,"Ada",2,"pizza"]) turns the array into ["pizza", 42, "Ada", 2, true].  swapTowardCenter([1,2,3,4,5,6]) turns the array into [6,2,4,3,5,1].  No need to return the array this time.
-
-function swapTowardCenter(arr){
-    for(let x = 0; arr.length>x ; x++){
-        arr[x] = arr[arr.length-1];
-        arr[x+2] = arr[arr.length -1 - x];
     }
     return arr;
 }
 
-//console.log(swapTowardCenter([1,2,3,4,5,6]))
+console.log(alwaysHungry([1,3,'hungry', 'food', true,]))
+//Swap Toward the Center - Given an array, swap the first and last values, third and third-to-last values, etc.  Example: swapTowardCenter([true,42,"Ada",2,"pizza"]) turns the array into ["pizza", 42, "Ada", 2, true].  swapTowardCenter([1,2,3,4,5,6]) turns the array into [6,2,4,3,5,1].  No need to return the array this time.
+
+function swapTowardCenter(arr){
+    for(let x = 0; arr.length/2>x ; x+=2){
+        let temp = arr[x] 
+        arr[x] = arr[arr.length-1-x];
+        arr[arr.length -1 - x] = temp;
+    }
+    return arr;
+}
+
+console.log(swapTowardCenter([1,2,3,4,5,6]))
 
 //Scale the Array - Given an array arr and a number num, multiply all values in the array arr by the number num, and return the changed array arr.  For example, scaleArray([1,2,3], 3) should return [3,6,9].
 
