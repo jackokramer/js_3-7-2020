@@ -102,3 +102,53 @@ function evensAndOdds(arr){
         }
     }
 }
+
+//Outlook: Negative - Given an array, create and return a new one containing all the values of the original array, but make them all negative (not simply multiplied by -1). Given [1,-3,5], return [-1,-3,-5].
+function negaTive(arr){
+    let newArr = [];
+    for(let x = 0; arr.length>x; x++){
+        if(arr[x]>0){
+        newArr.push(arr[x]*-1)
+        }
+    }
+    return newArr
+}
+
+//console.log(negaTive([1,-3,5,9]))
+
+//Always Hungry - Create a function that accepts an array, and prints "yummy" each time one of the values is equal to "food".  If no array values are "food", then print "I'm hungry" once.
+
+function alwaysHungry(arr){
+    let gotFood = false
+    for(let x = 0; arr.length>x; x++){
+        if(arr[x] === 'food'){
+            console.log('Delicious')
+        } else{
+            console.log(`I'm hungry like the wolf.`)
+        }
+    }
+    return arr;   
+}
+//Swap Toward the Center - Given an array, swap the first and last values, third and third-to-last values, etc.  Example: swapTowardCenter([true,42,"Ada",2,"pizza"]) turns the array into ["pizza", 42, "Ada", 2, true].  swapTowardCenter([1,2,3,4,5,6]) turns the array into [6,2,4,3,5,1].  No need to return the array this time.
+
+function swapTowardCenter(arr){
+    for(let x = 0; arr.length>x ; x++){
+        arr[x] = arr[arr.length-1];
+        arr[x+2] = arr[arr.length -1 - x];
+    }
+    return arr;
+}
+
+//console.log(swapTowardCenter([1,2,3,4,5,6]))
+
+//Scale the Array - Given an array arr and a number num, multiply all values in the array arr by the number num, and return the changed array arr.  For example, scaleArray([1,2,3], 3) should return [3,6,9].
+
+function scaleArray(arr, num){
+    let newArr = [];
+    for(let x = 0; arr.length>x; x++){
+        newArr.push(arr[x]*num)
+    }
+    return newArr;
+}
+
+console.log(scaleArray([1,2,3,6],7))
