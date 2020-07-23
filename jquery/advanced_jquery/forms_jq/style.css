@@ -1,0 +1,36 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    padding: 400px;
+    margin: 200px;
+    width: 90%;
+    height: 300px;
+    display: inline-block;
+    background-color: blue;
+}
+
+.input{
+    color: slategray;
+}
+
+.btn{
+    color: slategray;
+}
+
+label, input{
+    display: inline-block;
+    color: white;
+}
+
+p{
+    font-size: x-large;
+    font-weight: 700;
+    background-color: azure;
+}
+
+h4{
+    text-align: center;
+}

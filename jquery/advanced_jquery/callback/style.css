@@ -1,0 +1,33 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    padding: 200px;
+    margin: 150px;
+    background-color: bisque;
+    border-color: black;
+    box-shadow: blue;
+}
+
+.butts{
+    margin: 0 auto;
+    background-color: teal;
+    height: 400px;
+    width: 600px;
+    letter-spacing: normal;
+}
+
+.alert{
+    border-radius: 10px;
+    box-shadow: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.new_butt{
+    border-radius: 5px;
+    font-weight: 900;
+    font-family: 'Red Rose', cursive;
+}

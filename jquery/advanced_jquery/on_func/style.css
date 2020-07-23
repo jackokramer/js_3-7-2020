@@ -1,0 +1,23 @@
+body, html{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    text-align: center;
+    padding:200px;
+}
+
+button{
+    border-radius: 20px;
+
+}
+
+.a{
+    font-family:'Red Rose', cursive;
+    text-align: center;
+}
+
+.b{
+    font-family: 'Montserrat', sans-serif;
+}
