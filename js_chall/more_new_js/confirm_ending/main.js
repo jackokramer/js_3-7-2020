@@ -1,7 +1,12 @@
 function confirmEnd(str, ending){
     //write code here
-
-
+    for(let x = 0; x<str.length; x++){
+        if(str.length -1-x === ending){
+            return true;
+        } else {
+            return false
+        }
+    }
 }
 
 /**

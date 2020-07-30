@@ -1,5 +1,12 @@
 function compareInts(num1, num2){
     // write code here
+    if(num1<num2){
+        return 'less than'
+    } else if(num1>num2){
+        return 'greater than';
+    } else{
+        return 'num1 is = num2';
+    }
 }
 
 /**Test Suite */
