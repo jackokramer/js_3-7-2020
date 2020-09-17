@@ -6,7 +6,7 @@ const visualizer = document.getElementById('visualizer')
 
 const context = new AudioContext()
 const analyzerNode = new AnalyserNode(context, {fftSize: 1024})
-const gainNode = new gainNode(context, {gain: volume.value})
+const gainNode = new GainNode(context, {gain: volume.value})
 const bassEQ = new BiquadFilterNode(context, {
     type: 'lowshelf',
     frequency: 500,
@@ -100,6 +100,6 @@ function drawVisualizer(){
 }
 
 function resize(){
-    visualizer.width = visualizer.clientWidth*window.devicePixelRatio
-    visualizer.height =visualizer.clientHeight*window.devicePixelRatio
+    visualizer.width = visualizer.clientWidth * window.devicePixelRatio
+    visualizer.height = visualizer.clientHeight * window.devicePixelRatio
 }
